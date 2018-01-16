@@ -1,0 +1,19 @@
+<h1>Movie#show</h1>
+<p>Find me in app/views/movie/show.html.erb</p>
+
+<%= @details %>
+
+<div class="container">
+  <div class="row">
+		<% @recommendations.each do |recommendation| %>
+			<div class="col-sm-4">
+				<%= link_to image_tag("http://image.tmdb.org/t/p/w185/#{recommendation["poster_path"]}"), movie_path(id: recommendation["id"]) %>
+				<h2><%= link_to recommendation["title"], movie_path(id: recommendation["id"]) %></h2>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+
+<%= @recommendations %>
