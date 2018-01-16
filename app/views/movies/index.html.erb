@@ -10,7 +10,7 @@
 <div class="container">
   <div class="row">
 		<% @movies.each do |movie| %>
-			<div class="col-sm-4">
+			<div class="col-sm-4 text-center">
 				<%= link_to image_tag("http://image.tmdb.org/t/p/w185/#{movie["poster_path"]}"), movie_path(id: movie["id"]) %>
 				<h2><%= link_to movie["title"], movie_path(id: movie["id"]) %></h2>
 			</div>
